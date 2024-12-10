@@ -1,0 +1,189 @@
+/* Apply border-box box-sizing globally */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #393939;
+    padding-left: 10%;
+    padding-right: 10%;
+    transition: transform 0.3s ease-in-out; /* Apply transition on navbar */
+
+  }
+  
+  .navbar-logo {
+    text-align: center;
+  }
+  
+  .navbar-logo img {
+    width: 300px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+    font-style: normal;
+    letter-spacing: 3px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+  
+  .navbar ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    padding: 5px 50px;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-links li a {
+    position: relative;
+  }
+  
+  .navbar-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-links li a:hover::after {
+    width: 100%;
+  }
+  
+  .logo a:hover {
+    text-decoration: none;
+  }
+  
+  /* Mobile Menu Toggle */
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 1001;
+  } 
+   .navbar-links.mobile-screen {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 2rem;
+    transform: translateX(0);
+  }
+
+  
+  /* Toggle Button Icon (3 lines) */
+  .navbar-toggle-icon {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* When the mobile menu is active */
+  .navbar.active .navbar-toggle-icon:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+  
+  .navbar.active .navbar-toggle-icon:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar.active .navbar-toggle-icon:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  
+  /* Show the toggle button on mobile screens */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    
+  
+    /* Hide the large screen navbar */
+    .navbar-links.large-screen {
+      display: none;
+    }
+  
+
+    /* Style the third UL (mobile menu) */
+    .navbar-links.mobile-screen {
+      display: none; /* Hidden by default */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      gap: 2rem;
+      transform: translateX(-100%); /* Start off-screen */
+      transition: transform 0.3s ease-in-out; /* Smooth transition */
+    }
+  
+    /* Show the mobile menu when the navbar is active */
+    .navbar.active .navbar-links.mobile-screen {
+      display: flex;
+      transform: translateX(0); /* Slide in from the left */
+    }
+  
+    /* Styling for mobile menu links */
+    .navbar-links.mobile-screen li a {
+      color: black;
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+  
+    /* Toggle button styling */
+    .navbar-toggle {
+      display: block;
+      color: #fff;
+    }
+  
+    .navbar-logo img.logo {
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin-top: 5%;
+    }
+}
