@@ -1,0 +1,55 @@
+.portfolio-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../assets/image3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-cta{
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #ac1515;
+    color: white;
+    transition: 0.5s;
+  }
+
+  .hero-cta:hover{
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #fc7272 ;
+    color: black;
+  }
+  
+  .highlight {
+    color: #ff3737; /* Adjust to your preferred color */
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 4px;
+    border-radius: 4px; /* Optional for rounded edges */
+  }
+  

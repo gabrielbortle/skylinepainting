@@ -1,3 +1,8 @@
+/* Import Slick Carousel CSS */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+
 *{
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
