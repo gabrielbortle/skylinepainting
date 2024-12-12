@@ -27,7 +27,7 @@ const LogoCarousel = () => {
 
   const settings = {
     infinite: true,
-    speed: 1000, // Controls how fast the transition happens
+    speed: 2000, // Controls how fast the transition happens
     autoplay: true, // Enable autoplay
     autoplaySpeed: 300, // Adjust this to slow it down or speed it up
     slidesToShow: 5,
@@ -53,6 +53,7 @@ const LogoCarousel = () => {
 
   return (
     <div className="logo-carousel">
+      <h2 className="carousel-title">Our Trusted Partners</h2> {/* Title Added */}
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} className="logo-item">

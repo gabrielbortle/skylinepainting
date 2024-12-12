@@ -1,34 +1,44 @@
 /* LogoCarousel.css */
 .logo-carousel {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-    background-color: gray;
-  }
-  
-  .logo-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  margin-top: 5%;
+  padding: 10px;
+  text-align: center; /* Center the title */
+  background-color: gray;
+}
 
-  }
-  
-  .logo-item img {
-    max-width: 300px;
-    max-height: 100px;
-    object-fit: contain;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .logo-item img:hover {
-    transform: scale(1.1);
-  }
-  
+.carousel-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black; /* Change to the color you prefer */
+  margin-bottom: 20px; /* Space between title and carousel */
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.logo-item img {
+  max-width: 200px;
+  max-height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-item img:hover {
+  transform: scale(1.1);
+}
+
 
   @media (max-width:768px) {
 
   .logo-item img {
-    max-width: 200px;
+    max-width: 250px;
     max-height: 100px;
     object-fit: contain;
     transition: transform 0.3s ease-in-out;

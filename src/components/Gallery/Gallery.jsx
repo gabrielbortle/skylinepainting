@@ -48,9 +48,11 @@ const Gallery = () => {
   };
 
   return (
+    
     <div className="gallery-container">
+            <section id='gallery-section'></section>
+
       <h2>Portfolio Gallery</h2>
-      <section id='gallery-section'></section>
       <div className="gallery">
         {images.map((image, index) => (
           <div key={index} className="gallery-item" onClick={() => openModal(index)}>
