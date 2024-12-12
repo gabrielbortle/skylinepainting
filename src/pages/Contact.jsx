@@ -1,7 +1,16 @@
 import React from 'react';
+import AboutUs from '../components/AboutMe/AboutMe';
+import ContactInfo from '../components/ContactInfo/ContactInfo';
+
 
 const Contact = () => {
-  return <div>Welcome to the Contact Page</div>;
+  return (
+    <div>
+      <AboutUs />
+
+      <ContactInfo />
+    </div>
+  );
 };
 
 export default Contact;
