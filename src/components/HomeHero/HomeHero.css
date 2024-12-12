@@ -1,46 +1,71 @@
 .home-hero {
     position: relative;
-    background-image: url('../../assets/homeHero.jpg');
-    background-size: cover;
-    background-position: center;
+    background: url('../../assets/homeHero.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
+    color: white;
     padding: 0 20px;
+    overflow: hidden;
   }
   
-  .overlay-text {
+  .home-hero::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 0;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; /* Ensure text appears above the overlay */
+  }
+  
+  
+  .overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    animation: fadeIn 1.2s ease-in-out;
   }
   
   .hero-title {
     font-size: 4rem;
-    margin-bottom: 0.5rem;
-    animation: fadeInScaleUp 1.2s ease-out forwards;
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
   
   .hero-subtitle {
     font-size: 2rem;
-    margin-bottom: 1rem;
-    animation: fadeInSlideUp 1.5s ease-out forwards;
+    margin-bottom: 0.5rem;
   }
   
-  .hero-cta {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: fadeInSlideUp 2s ease-out forwards;
+  .hero-description {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
   
-  .numbers p {
+  .contact-numbers p {
     font-size: 1.5rem;
     margin: 0.5rem 0;
-    animation: fadeInSlideUp 2.5s ease-out forwards;
+  }
+  
+  .highlight {
+    color: #fc7272;
+    font-weight: bold;
   }
   
   .cta-button {
@@ -50,64 +75,41 @@
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    animation: fadeInButton 3s ease-out forwards;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .cta-button:hover {
-    background-color: #8a1313;
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
   
-  @keyframes fadeInScaleUp {
-    0% {
+  @keyframes fadeIn {
+    from {
       opacity: 0;
-      transform: translateY(-30px) scale(0.9);
+      transform: translateY(20px);
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-  
-  @keyframes fadeInSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
+    to {
       opacity: 1;
       transform: translateY(0);
     }
   }
   
-  @keyframes fadeInButton {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  
   @media (max-width: 768px) {
     .hero-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   
     .hero-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .hero-description {
       font-size: 1.2rem;
     }
   
-    .hero-cta {
-      font-size: 1.1rem;
-    }
-  
-    .numbers p {
+    .contact-numbers p {
       font-size: 1rem;
     }
   

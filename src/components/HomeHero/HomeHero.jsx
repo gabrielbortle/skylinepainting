@@ -1,27 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomeHero.css'; // Make sure you have your custom styles here
+import './HomeHero.css';
 
 const HomeHero = () => {
   return (
     <div className="home-hero">
-      <div className="overlay-text">
-        <h1 className="hero-title">
-          <strong>Welcome to Skyline Painting</strong>
-        </h1>
-        <h3 className="hero-subtitle">
-          With over <em>19 years of experience</em> in the industry
-        </h3>
-        <h4 className="hero-cta">
-          <em>Top Quality Assurance</em> &amp; <em>Dedication to Customer Satisfaction</em>
-        </h4>
-        <div className="numbers">
-          <p className="phone-number">(208) 701 - 8837</p>
-          <p className="phone-number">(208) 313 - 9266</p>
+      <div className="overlay">
+        <div className="content">
+          <h1 className="hero-title">
+            Welcome to Skyline Painting
+          </h1>
+          <p className="hero-subtitle">
+            Over <span className="highlight">19 years of experience</span> delivering excellence.
+          </p>
+          <p className="hero-description">
+            <span className="highlight">Top Quality Assurance</span> &amp; <span className="highlight">Customer Satisfaction</span>
+          </p>
+          <div className="contact-numbers">
+            <p><span className="highlight">(208) 701 - 8837</span></p>
+            <p><span className="highlight">(208) 313 - 9266</span></p>
+          </div>
+          <Link to="/contact" className="cta-button">
+            Request a Free Quote
+          </Link>
         </div>
-        <Link to="/contact" className="cta-button">
-          Request a Free Quote
-        </Link>
       </div>
     </div>
   );

@@ -1,7 +1,13 @@
+import { div } from 'framer-motion/client';
 import React from 'react';
+import Gallery from '../components/Gallery/Gallery';
 
 const Portfolio = () => {
-  return <div>Welcome to the Portfolio Page</div>;
+  return(
+    <div>
+      <Gallery />
+    </div>
+  );
 };
 
 export default Portfolio;
