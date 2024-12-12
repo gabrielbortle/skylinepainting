@@ -22,7 +22,7 @@ const ContactInfo = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <p className="contact-description">
-          Chino Ortiz is available for inquiries. Feel free to reach out via the
+          Chino Ortiz is available for inquiries.<br /> Feel free to reach out via the
           phone numbers or email provided below.
         </p>
 

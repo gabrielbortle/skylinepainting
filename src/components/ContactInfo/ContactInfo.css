@@ -16,7 +16,7 @@
   }
   
   .contact-description {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 2rem;
   }
@@ -26,7 +26,7 @@
   }
   
   .contact-item h3 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #555;
     margin-bottom: 0.5rem;
@@ -38,12 +38,12 @@
   }
   
   .contact-item ul li {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: #333;
   }
   
   .contact-item a {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: #ac1515;
     text-decoration: none;
   }
