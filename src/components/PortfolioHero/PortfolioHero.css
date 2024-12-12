@@ -1,55 +1,75 @@
 .portfolio-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url('../../assets/image3.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-    
-  }
-  
-  .hero-content {
-    max-width: 800px;
-  }
-  
-  .hero-title {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero-tagline {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-cta{
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    background-color: #ac1515;
-    color: white;
-    transition: 0.5s;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../../assets/image3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
 
-  .hero-cta:hover{
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    background-color: #fc7272 ;
-    color: black;
+.portfolio-hero-content {
+  max-width: 800px;
+  transform: translateY(30px); /* Start below and slide up */
+  animation: slideIn 1s ease-out forwards 0.5s; /* Slide-in effect */
+}
+
+.hero-title, .hero-tagline {
+  animation: slideTextIn 1s ease-out forwards; /* Add slide-in animation */
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  background-color: #ac1515;
+  color: white;
+}
+
+.hero-cta:hover {
+  transform: scale(1.1); /* Scale up effect */
+  background-color: #fc7272;
+  color: black;
+}
+
+.highlight {
+  color: #ff3737;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
   }
-  
-  .highlight {
-    color: #ff3737; /* Adjust to your preferred color */
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 4px;
-    border-radius: 4px; /* Optional for rounded edges */
+  100% {
+    transform: translateY(0);
   }
-  
+}
+
+@keyframes slideTextIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Slide in from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at the original position */
+  }
+}

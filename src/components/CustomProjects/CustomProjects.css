@@ -1,0 +1,48 @@
+/* Custom Projects Section Styling */
+.custom-projects {
+    background-color: #f4f4f4; /* Light gray background for emphasis */
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .custom-projects-text {
+    font-size: 2.5rem; /* Much larger text */
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cta-button {
+    background-color: #ac1515; /* Highlight color */
+    color: white;
+    padding: 20px 40px;
+    font-size: 2rem; /* Larger button text */
+    text-decoration: none;
+    border-radius: 50px; /* Rounded button */
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    background-color: #8c1313;
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+  }
+  
+  .cta-button:active {
+    transform: scale(0.98); /* Button press effect */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .custom-projects-text {
+      font-size: 2rem; /* Slightly smaller text on mobile */
+    }
+  
+    .cta-button {
+      font-size: 1.5rem; /* Smaller button text on mobile */
+      padding: 15px 30px; /* Adjust button size */
+    }
+  }
+  

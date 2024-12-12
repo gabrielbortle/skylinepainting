@@ -1,0 +1,85 @@
+.service-box {
+    width: 45%;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ac1515;
+    margin-bottom: 1rem;
+  }
+  
+  .service-details {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    padding: 12px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center; /* Align text and arrow to opposite sides */
+    gap: 10px;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+  }
+  
+  summary:hover {
+    background-color: #ac1515;
+    color: white;
+    transform: scale(1.05); /* Slightly increases the size on hover */
+  }
+  
+  .summary-arrow {
+    transition: transform 0.3s ease; /* Smooth arrow rotation */
+    font-size: 1rem; /* Adjust this value to make the arrow smaller or larger */
+
+  }
+  
+  .service-description {
+    padding: 12px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #333;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out, max-height 0.4s ease-out;
+  }
+  
+  .service-details[open] .service-description {
+    max-height: 500px; /* Adjust based on content length */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .service-details[open] summary .summary-arrow {
+    transform: rotate(180deg); /* Rotate the arrow when open */
+  }
+  
+  details {
+    margin: 0.5rem 0;
+  }
+  

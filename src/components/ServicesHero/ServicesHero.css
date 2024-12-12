@@ -1,0 +1,124 @@
+/* Hero section styling */
+.services-hero {
+    position: relative; /* To position the overlay */
+    background-image: url('../../assets/image4.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    height: 80vh; /* Adjust height as needed */
+    
+    /* Using Flexbox to center the content both horizontally and vertically */
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-direction: column; /* Stack the content vertically */
+  }
+  
+  /* Dark overlay to make the text more legible */
+  .services-hero::before {
+    content: ''; /* Necessary for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure the overlay is below the text */
+  }
+  
+  .hero-content {
+    position: relative; /* Make sure the content is above the overlay */
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.2s;
+    text-align: center;
+    justify-content: center;
+    z-index: 2; /* Ensure the text is above the overlay */
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInFromLeft 1s forwards;
+    animation-delay: 1s;
+  }
+  
+  .hero-description {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideInFromRight 1s forwards;
+    animation-delay: 1.5s;
+  }
+  
+  .cta-button {
+    background-color: #ac1515; /* Highlight color */
+    color: white;
+    padding: 15px 25px;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #8c1313;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+    
+    .hero-description {
+      font-size: 1.8rem;
+    }
+  
+    .cta-button {
+      background-color: #ac1515; /* Highlight color */
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+  }
+  
