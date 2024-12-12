@@ -1,0 +1,36 @@
+/* LogoCarousel.css */
+.logo-carousel {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: gray;
+  }
+  
+  .logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .logo-item img {
+    max-width: 300px;
+    max-height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo-item img:hover {
+    transform: scale(1.1);
+  }
+  
+
+  @media (max-width:768px) {
+
+  .logo-item img {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+  }

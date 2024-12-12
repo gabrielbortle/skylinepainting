@@ -2,3 +2,11 @@
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
 }
+/* Global reset to remove horizontal overflow */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
